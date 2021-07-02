@@ -1,0 +1,2 @@
+﻿Get-ADGroupMember 'Domain Admins' -Server heathlambert.com | Get-ADUser -Properties whenCreated | where {$_.whencreated -ge (get-date 'January 01, 2021' ) -and $_.whencreated -lt (get-date 'March 31, 2021' ) } `
+| select name,whencreated | export-csv c:\users\a-ilaws\Heathget-datePWsettings21.csv
